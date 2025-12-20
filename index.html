@@ -1,107 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>UGR NOX Token | Official Website</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official website of UGR NOX Token on Binance Smart Chain">
-  <meta name="keywords" content="UGR NOX Token, BSC Token, Binance Smart Chain">
-  
-  <!-- Open Graph (BscScan / Social Preview) -->
-  <meta property="og:title" content="UGR NOX Token">
-  <meta property="og:description" content="Official token on Binance Smart Chain">
-  <meta property="og:image" content="logo.png">
-  <meta property="og:type" content="website">
-
-  <style>
-    body {
-      background: #0b0b0b;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+  <meta charset="UTF-8" />
+  <title>UGR NOX Token | Official Website</title>  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official website of UGR NOX Token deployed on Binance Smart Chain (BEP-20)." />
+  <meta name="keywords" content="UGR NOX Token, BEP20, BSC Token, Binance Smart Chain" />  <!-- Open Graph / Social Preview -->  <meta property="og:title" content="UGR NOX Token" />
+  <meta property="og:description" content="Official token deployed on Binance Smart Chain (BEP-20)." />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:type" content="website" />  <style>
+    :root {
+      --bg-main: #050508;
+      --bg-card: rgba(20, 20, 30, 0.75);
+      --neon-primary: #00ffd5;
+      --neon-secondary: #6f7cff;
+      --text-main: #ffffff;
+      --text-muted: #b5b5c2;
+      --border-neon: rgba(0, 255, 213, 0.25);
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(0,255,213,0.08), transparent 40%),
+        radial-gradient(circle at bottom, rgba(111,124,255,0.06), transparent 45%),
+        var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
     .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 20px;
       text-align: center;
     }
-    img {
-      max-width: 160px;
-      margin-bottom: 20px;
+
+    .logo {
+      max-width: 190px;
+      margin-bottom: 35px;
+      filter: drop-shadow(0 0 25px rgba(0,255,213,0.35));
     }
+
     h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 40px;
+      margin: 0 0 12px;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    p {
-      color: #cccccc;
-      font-size: 16px;
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 50px;
     }
-    a {
-      color: #00ffd5;
-      text-decoration: none;
+
+    .card {
+      background: linear-gradient(180deg, rgba(25,25,40,0.9), rgba(10,10,20,0.9));
+      border: 1px solid var(--border-neon);
+      border-radius: 18px;
+      padding: 28px 26px;
+      margin-bottom: 30px;
+      box-shadow:
+        0 0 30px rgba(0,255,213,0.08),
+        inset 0 0 25px rgba(0,255,213,0.03);
+      backdrop-filter: blur(6px);
     }
-    .box {
-      background: #151515;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 25px;
+
+    .card strong {
+      color: var(--neon-primary);
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
-    footer {
-      margin-top: 40px;
+
+    .contract {
+      word-break: break-all;
+      font-family: monospace;
       font-size: 14px;
-      color: #777;
+      margin-top: 10px;
+      color: #e6e6f0;
     }
-  </style>
-</head>
 
-<body>
-  <div class="container">
+    a {
+      color: var(--neon-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-    <img src="logo.png" alt="UGR NOX Token Logo">
+    a:hover {
+      text-shadow: 0 0 8px rgba(0,255,213,0.6);
+    }
 
-    <h1>UGR NOX TOKEN</h1>
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-    <p>Official token deployed on Binance Smart Chain (BSC).</p>
+    .badge {
+      padding: 12px 22px;
+      border-radius: 40px;
+      background: rgba(10,10,20,0.8);
+      border: 1px solid var(--border-neon);
+      box-shadow: 0 0 18px rgba(0,255,213,0.12);
+      transition: all 0.25s ease;
+    }
 
-    <div class="box">
-      <p><strong>Contract Address:</strong><br>
-      <span>0xa131ebbfB81118F1A7228A54Cc435e1E86744EB8</span></p>
+    .badge:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 30px rgba(0,255,213,0.35);
+    }
 
-      <p><strong>Network:</strong> Binance Smart Chain (BEP-20)</p>
-    </div>
+    footer {
+      margin-top: 60px;
+      font-size: 13px;
+      color: #7f7f99;
+      opacity: 0.9;
+    }
 
-    <div class="box">
-      <p>
-        🐦 Twitter / X<br>
-        <a href="https://x.com/ugrnt44695" target="_blank">
-          👆🏻👆🏻👆🏻
-        </a>
-      </p>
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+      .container {
+        padding: 50px 16px;
+      }
+    }
+  @keyframes neonPulse {
+      0% { text-shadow: 0 0 8px rgba(0,255,213,0.4), 0 0 16px rgba(0,255,213,0.2); }
+      50% { text-shadow: 0 0 18px rgba(0,255,213,0.8), 0 0 36px rgba(0,255,213,0.4); }
+      100% { text-shadow: 0 0 8px rgba(0,255,213,0.4), 0 0 16px rgba(0,255,213,0.2); }
+    }
 
-      <p>
-        📧 Contact<br>
-        <a href="ugrnoxtoken@gmail.com">
-          ugrnoxtoken@gmail.com
-        </a>
-      </p>
-    </div>
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
 
-    <div class="box">
-      <p><strong>Disclaimer</strong></p>
-      <p>
-        This website does not constitute financial advice.  
-        Cryptocurrency investments involve risk.  
-        Always do your own research.
-      </p>
-    </div>
+    @keyframes cardGlow {
+      0% { box-shadow: 0 0 20px rgba(0,255,213,0.08); }
+      50% { box-shadow: 0 0 35px rgba(0,255,213,0.25); }
+      100% { box-shadow: 0 0 20px rgba(0,255,213,0.08); }
+    }
 
-    <footer>
-      © 2025 UGR NOX Token. All rights reserved.
-    </footer>
+    h1 {
+      animation: neonPulse 3.5s ease-in-out infinite;
+    }
+
+    .logo {
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+
+    .card {
+      animation: cardGlow 6s ease-in-out infinite;
+    }
+
+  @keyframes neonPulse {
+      0% { text-shadow: 0 0 8px rgba(0,255,213,0.4), 0 0 16px rgba(0,255,213,0.2); }
+      50% { text-shadow: 0 0 18px rgba(0,255,213,0.8), 0 0 36px rgba(0,255,213,0.4); }
+      100% { text-shadow: 0 0 8px rgba(0,255,213,0.4), 0 0 16px rgba(0,255,213,0.2); }
+    }
+
+    @keyframes floatLogo {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes cardGlow {
+      0% { box-shadow: 0 0 20px rgba(0,255,213,0.08); }
+      50% { box-shadow: 0 0 35px rgba(0,255,213,0.25); }
+      100% { box-shadow: 0 0 20px rgba(0,255,213,0.08); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      animation: neonPulse 3.5s ease-in-out infinite;
+    }
+
+    .logo {
+      animation: floatLogo 4s ease-in-out infinite, fadeUp 1.2s ease forwards;
+    }
+
+    .subtitle {
+      animation: fadeUp 1.4s ease forwards;
+    }
+
+    .card {
+      animation: cardGlow 6s ease-in-out infinite, fadeUp 1.6s ease forwards;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 45px rgba(0,255,213,0.45);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0,255,213,0.12), transparent 35%);
+      pointer-events: none;
+      transition: background 0.05s linear;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+  </style></head><body>
+  <div class="container"><img src="logo.png" alt="UGR NOX Token Logo" class="logo" />
+
+<h1>UGR NOX TOKEN</h1>
+<div class="subtitle">Official token deployed on Binance Smart Chain (BEP-20)</div>
+
+<div class="card">
+  <p><strong>Contract Address</strong></p>
+  <div class="contract">0xa131ebbfB81118F1A7228A54Cc435e1E86744EB8</div>
+
+  <p style="margin-top:20px;"><strong>Network</strong></p>
+  <p>Binance Smart Chain (BEP-20)</p>
+</div>
+
+<div class="card">
+  <div class="social">
+    <div class="badge">🐦 <a href="https://x.com/ugrnt44695" target="_blank">Twitter / X</a></div>
+    <div class="badge">📧 <a href="mailto:ugrnoxtoken@gmail.com">ugrnoxtoken@gmail.com</a></div>
+  </div>
+</div>
+
+<div class="card">
+  <p><strong>Disclaimer</strong></p>
+  <p>
+    This website does not constitute financial advice.<br />
+    Cryptocurrency investments involve risk.<br />
+    Always do your own research.
+  </p>
+</div>
+
+<footer>
+  © 2025 UGR NOX Token. All rights reserved.
+</footer>
 
   </div>
 </body>
